@@ -12,7 +12,7 @@ Content: This project uses deep learning and computer vision techniques to detec
 ## Project Structure
 2.数据集，预处理及项目结构
 数据集AIRTLab：https://github.com/airtlab/A-Dataset-for-Automatic-Violence-Detection-in-Videos
-我们对上述数据集做了新的整理分类，划分为非暴力（包括手势，握手，击掌，拥抱，跳跃，行走，打招呼），初级暴力（包括推搡，扇耳光，窒息，打架，踢，拳击），高级暴力（包括枪击，刺伤，棍棒），数据结构如下：
+首先，我们对上述数据集做了新的整理分类，划分为非暴力（包括手势，握手，击掌，拥抱，跳跃，行走，打招呼），初级暴力（包括推搡，扇耳光，窒息，打架，踢，拳击），高级暴力（包括枪击，刺伤，棍棒），数据结构如下：
 dataset/
     train/
         class1/
@@ -40,11 +40,50 @@ dataset/
             img1.jpg
             img2.jpg
             ...
+其次，对已分类的视频进行抽帧，每秒抽取三帧，每隔10帧保存1帧，即保存0,10,20，...帧。
+对于yolo部分，帧的形状为（640x640x3），并且需要用labeling进行动作标注；对于CNNLSTM部分，帧的形状为（64X64X3）。
+最后，yolo部分参照：yolo.ipynb；CNNLSTM参照：0712.ipynb，train_cnn_lstm.ipynb，test_cnn_lstm.ipynb。
+Jupter文件包含了模型的训练，测试和评估。
 
+2.Dataset, Preprocessing and Project Structure
 
-- `cnn.ipynb`: Jupyter Notebook containing the CNN model implementation, training, and evaluation.
+Dataset AIRTLab: https://github.com/airtlab/A-Dataset-for-Automatic-Violence-Detection-in-Videos
+
+First of all, we made a new organizing classification of the above dataset into nonviolent (including gesture, handshake, highfive, hug, jump, walk, and greet), low-violence (including push, slap, choking, stifle, kick, and punch), and high-violence (including shoot, stab, and club), and the data structure is as follows:
+dataset/
+    train/
+        class1/
+            img1.jpg
+            img2.jpg
+            ...
+        class2/
+            img1.jpg
+            img2.jpg
+            ...
+        class3/
+            img1.jpg
+            img2.jpg
+            ...
+    test/
+        class1/
+            img1.jpg
+            img2.jpg
+            ...
+        class2/
+            img1.jpg
+            img2.jpg
+            ...
+         class3/
+            img1.jpg
+            img2.jpg
+            ...
+Secondly, the classified video is extracted by drawing three frames per second and saving 1 frame every 10 frames, i.e., saving 0,10,20,... frames.
+For the yolo part, the shape of the frame is (640x640x3), and it needs to be labeled with labeling for action; for the CNNLSTM part, the shape of the frame is (64X64X3).
+Finally, the yolo part refers to: yolo.ipynb; CNNLSTM refers to: 0712.ipynb, train_cnn_lstm.ipynb, test_cnn_lstm.ipynb.
+Jupyter Notebook containing the model training, testing and evaluation.
 
 ## Requirements
+运行代码需要你安装如下
 
 To run the code in this repository, you need to have the following libraries installed:
 
