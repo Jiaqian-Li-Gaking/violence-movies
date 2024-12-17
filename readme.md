@@ -7,9 +7,40 @@
 1. Project title and content overview
  
 Title: Deep learning for violence and abuse detection in cinema and series: OTT streaming platforms
-Content: This project uses deep learning and computer vision techniques to detect and remove violent and inappropriate content from movie videos. Unlike current common detection methods that only identify whether the violence is violent or not, the framework also categorizes the identified violence in terms of primary and advanced violence. It combines YOLO and CNN-LSTM models to detect and categorize violent content with 70% accuracy. With the increased concern about violent content in Hollywood movies, the framework fills the current gap in content review for streaming platforms, reducing the reliance on manual content review and improving efficiency. Its scalability across different video types makes it a powerful tool for content management on digital platforms.
+Content: This project uses deep learning and computer vision techniques to detect and remove violent and inappropriate content from movie videos. Unlike current common detection methods that only identify whether the violence is violent or not, the framework also categorizes the identified violence in terms of lowand high levels  in movies. It combines YOLO and CNN-LSTM models to detect and categorize violent content with 70% accuracy. With the increased concern about violent content in Hollywood movies, the framework fills the current gap in content review for streaming platforms, reducing the reliance on manual content review and improving efficiency. Its scalability across different video types makes it a powerful tool for content management on digital platforms.
 
 ## Project Structure
+2.数据集，预处理及项目结构
+数据集AIRTLab：https://github.com/airtlab/A-Dataset-for-Automatic-Violence-Detection-in-Videos
+我们对上述数据集做了新的整理分类，划分为非暴力（包括手势，握手，击掌，拥抱，跳跃，行走，打招呼），初级暴力（包括推搡，扇耳光，窒息，打架，踢，拳击），高级暴力（包括枪击，刺伤，棍棒），数据结构如下：
+dataset/
+    train/
+        class1/
+            img1.jpg
+            img2.jpg
+            ...
+        class2/
+            img1.jpg
+            img2.jpg
+            ...
+        class3/
+            img1.jpg
+            img2.jpg
+            ...
+    test/
+        class1/
+            img1.jpg
+            img2.jpg
+            ...
+        class2/
+            img1.jpg
+            img2.jpg
+            ...
+         class3/
+            img1.jpg
+            img2.jpg
+            ...
+
 
 - `cnn.ipynb`: Jupyter Notebook containing the CNN model implementation, training, and evaluation.
 
