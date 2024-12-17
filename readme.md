@@ -1,6 +1,13 @@
-# CNN Model for Image Classification
+# YOLO-CNN-LSTM Model for Image Classification
+1.项目标题与内容概述
 
-This repository contains a Convolutional Neural Network (CNN) implementation for image classification using TensorFlow and Keras. The model is trained on video data and can be used for binary classification tasks.
+标题：深度学习用于检测电影和连续剧中的暴力和虐待行为： OTT 流媒体平台
+概述：本项目利用深度学习和计算机视觉技术检测并移除电影视频中的暴力和不当内容。与目前常见的仅识别是否为暴力的检测方法不同的是，该框架还对识别到的暴力行为进行初级暴力和高级暴力的分类。它结合了YOLO和CNN-LSTM模型，能够以70%的准确率检测和分类暴力内容。随着人们对好莱坞影片暴力内容的关注增加，该框架填补了当前流媒体平台内容审核的空白，减少了对人工内容审核的依赖，提高了效率。它在不同视频类型上的可扩展性使其成为数字平台内容管理的有力工具。
+
+1. Project title and content overview
+ 
+Title: Deep learning for violence and abuse detection in cinema and series: OTT streaming platforms
+Content: This project uses deep learning and computer vision techniques to detect and remove violent and inappropriate content from movie videos. Unlike current common detection methods that only identify whether the violence is violent or not, the framework also categorizes the identified violence in terms of primary and advanced violence. It combines YOLO and CNN-LSTM models to detect and categorize violent content with 70% accuracy. With the increased concern about violent content in Hollywood movies, the framework fills the current gap in content review for streaming platforms, reducing the reliance on manual content review and improving efficiency. Its scalability across different video types makes it a powerful tool for content management on digital platforms.
 
 ## Project Structure
 
