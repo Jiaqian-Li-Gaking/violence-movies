@@ -83,7 +83,14 @@ Finally, the yolo part refers to: yolo.ipynb; CNNLSTM refers to: 0712.ipynb, tra
 Jupyter Notebook containing the model training, testing and evaluation.
 
 ## Requirements
-运行代码需要你安装如下
+运行代码需要你安装如下函数库：
+- Python 3.x
+- TensorFlow
+- Keras
+- NumPy
+- Matplotlib
+- OpenCV
+- Jupyter
 
 To run the code in this repository, you need to have the following libraries installed:
 
