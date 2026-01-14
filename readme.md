@@ -132,7 +132,4 @@ dataset/
             ...
 ``` 
   
-git clone https://github.com/yourusername/cnn-image-classification.git
-cd cnn-image-classification
 
-jupyter notebook cnn.ipynb
