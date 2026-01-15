@@ -25,9 +25,8 @@ Content: This project uses deep learning and computer vision techniques to detec
 Dataset AIRTLab: https://github.com/airtlab/A-Dataset-for-Automatic-Violence-Detection-in-Videos
 
 ### b) Roboflow Violence Detection Dataset
+Around 10 thousand images anotated by 4 classes of box bounding, including NonViolence, Violence, guns, knife.
 Roboflow Violence Detection Dataset: https://universe.roboflow.com/violence-detection-fbe46/violence-detection-nbx24
-
-Around 10 thousand images anotated by 4 classes of box bounding, include NonViolence, Violence, guns, knife.
 
 ### c) Project logic
 
@@ -36,8 +35,11 @@ Around 10 thousand images anotated by 4 classes of box bounding, include NonViol
 
 ## 3. Experiment results
 ### 3dcnn-lstm training result
-<img src="images/3dcnn-lstm-roc.png" width="300" />
-<img src="images/3dcnn-lstm-valacc.png" width="300" />
+
+<p align="center">
+    <img src="images/3dcnn-lstm-roc.png" width="350" />
+    <img src="images/3dcnn-lstm-valacc.png" width="350" />
+</p>
 
 ### Yolov8 training result
 <img src="src/runs/detect/train_yolov8s_violence_v3/results.png" />
@@ -46,7 +48,7 @@ Around 10 thousand images anotated by 4 classes of box bounding, include NonViol
 #### Non-violence
 
 #### Low-level violence
-<img src="images/Misson_ Impossible - Fallout_sample_clip_4_01_47_to_02_03.gif" width="300" />
+<img src="images/Misson_ Impossible - Fallout_sample_clip_4_01_47_to_02_03.gif" />
 
 #### high-level violence
-<img src="images/Misson_ Impossible - Fallout_sample_clip_6_02_38_to_04_17.gif" width="300" />
+<img src="images/Misson_ Impossible - Fallout_sample_clip_6_02_38_to_04_17.gif" />
