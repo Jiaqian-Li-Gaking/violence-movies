@@ -33,7 +33,7 @@ Or we can use the following command line:
 We made a new organizing classification of the above dataset into nonviolent (including gesture, handshake, highfive, hug, jump, walk, and greet), low-violence (including push, slap, choking, stifle, kick, and punch), and high-violence (including shoot, stab, and club). Then, We divide each video into chunks with 16 frames at a resolution of 112 x 112 (e.g. a video may have 8 chunks) and store the samples and labels to data\processed\violence-detection-dataset. The code refers to src\preprocess\preprocess_AIRTLab.
 
 ### b) Roboflow Violence Detection Dataset
-Around 10 thousand images anotated by 4 classes of box bounding, including NonViolence, Violence, guns, knife.
+Around 10 thousand images annotated by 4 classes of box bounding, including NonViolence, Violence, guns, knife.
 Roboflow Violence Detection Dataset: https://universe.roboflow.com/violence-detection-fbe46/violence-detection-nbx24
 
 Dataset Split:
@@ -57,6 +57,7 @@ Link: https://drive.google.com/drive/folders/1ISmc3xwPOwAkuYoVuEcPwje267oRG9k2?u
 ## 3. Training
 ### 3dcnn-lstm training
 Please refer to src\train_cnn_lstm_keras
+<img src="images\Average Validation Accuracy of Chunks and Videos Across Epochs.png" />
 <p align="center">
     <img src="images/3dcnn-lstm-roc.png" width="360" />
     <img src="images/3dcnn-lstm-valacc.png" width="360" />
