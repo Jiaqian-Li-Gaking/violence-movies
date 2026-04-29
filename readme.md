@@ -15,6 +15,29 @@ You can install the required packages using the following command:
 ```bash
 pip install tensorflow keras numpy matplotlib opencv-python-headless jupyter
 ```
+
+## Folder Structure
+```text
+VIOLENCE-MOVIES/
+├── data/
+│   ├── processed/              # processed datasets
+│   │   └── violence-detection-dataset/
+│   ├── raw/                    # raw datasets
+│   │   ├── Real Life Violence Dataset/
+│   │   └── violence-detection-dataset/
+│   ├── roboflow/               # Roboflow YOLO dataset
+│   └── streaming videos/       # videos for real-world inference testing
+│       ├── filter_results/
+│       └── raw_samples/
+├── deprecated/                 # old experimental code
+├── images/                     # images used in README/report
+├── src/                        # main source code and notebooks
+│   └── preprocess/             # preprocessing scripts
+├── yolo_weight/                # YOLO model weights
+└── c3d_weight/                 # C3D model weights
+```
+
+
 ## 1. Project Objective and Content Overview
  
 Title: Deep learning for violence and abuse detection in cinema and series: OTT streaming platforms
@@ -56,7 +79,9 @@ Link: https://drive.google.com/drive/folders/1ISmc3xwPOwAkuYoVuEcPwje267oRG9k2?u
 
 ## 3. Training
 ### 3dcnn-lstm training
-Please refer to src\train_cnn_lstm_keras
+We used pretained weight from Sports-1M. Please refer to src\train_cnn_lstm_keras
+
+Link: https://github.com/aslucki/C3D_Sport1M_keras
 <img src="images\Average Validation Accuracy of Chunks and Videos Across Epochs.png" />
 <p align="center">
     <img src="images/3dcnn-lstm-roc.png" width="360" />
@@ -65,7 +90,7 @@ Please refer to src\train_cnn_lstm_keras
 
 ### Yolov8 training
 Please refer to src\train_yolo
-<img src="src/runs/detect/train_yolov8s_violence_v3/results.png" />
+<img src="images/Yolo_results.png" />
 
 ## 4. Analysis (Testing)
 We run yolo first to extract subvideos that contain violence frames from streaming video. The extracting logic is if we detect violence frame, then we keep that frame and the following 5 seconde frames as a subvideo, saving in data\streaming videos\filter_results. Please refer to src\test_yolo.
