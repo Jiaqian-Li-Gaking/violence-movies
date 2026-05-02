@@ -43,6 +43,8 @@ VIOLENCE-MOVIES/
 Title: Deep learning for violence and abuse detection in cinema and series: OTT streaming platforms
 Content: This project uses deep learning and computer vision techniques to detect and remove violent and inappropriate content from movie videos. Unlike current common detection methods that only identify whether the violence is violent or not, the framework also categorizes the identified violence in terms of lowand high levels  in movies. It combines YOLO and CNN-LSTM models to detect and categorize violent content with 70% accuracy. With the increased concern about violent content in Hollywood movies, the framework fills the current gap in content review for streaming platforms, reducing the reliance on manual content review and improving efficiency. Its scalability across different video types makes it a powerful tool for content management on digital platforms.
 
+<img src="images\Framework6.png" width="720"/>
+
 ## 2.Dataset and Preprocessing
 ### a) AIRTLab Dataset
 Dataset AIRTLab: https://github.com/airtlab/A-Dataset-for-Automatic-Violence-Detection-in-Videos
@@ -82,23 +84,43 @@ Link: https://drive.google.com/drive/folders/1ISmc3xwPOwAkuYoVuEcPwje267oRG9k2?u
 We used pretained weight from Sports-1M. Please refer to src\train_cnn_lstm_keras
 
 Link: https://github.com/aslucki/C3D_Sport1M_keras
-<img src="images\Average Validation Accuracy of Chunks and Videos Across Epochs.png" />
+
+Model Structure
+
+<p align="center">
+  <img src="images\Model Architecture.png"  width="380"/>
+  <img src="images\video prediction.png"  width="380"/>
+</p>
+
+
+Model Comparison
+
+<img src="images\Model Comparison.png"/>
+
+<!-- <img src="images\Average Validation Accuracy of Chunks and Videos Across Epochs.png" />
 <p align="center">
     <img src="images/3dcnn-lstm-roc.png" width="360" />
     <img src="images/3dcnn-lstm-valacc.png" width="360" />
-</p>
+</p> -->
 
 ### Yolov8 training
 Please refer to src\train_yolo
 <img src="images/Yolo_results.png" />
 
-## 4. Analysis (Testing)
+## 4. Analysis
 We run yolo first to extract subvideos that contain violence frames from streaming video. The extracting logic is if we detect violence frame, then we keep that frame and the following 5 seconde frames as a subvideo, saving in data\streaming videos\filter_results. Please refer to src\test_yolo.
 Then we run 3dcnn-lstm model to analyse the classification result from previous subvideos. Please refer to src\test_cnn_lstm_keras.
 
-### Streaming videos analysis
-#### Low-level violence
+### Yolo Detection analysis
 <img src="images/Misson_ Impossible - Fallout_sample_clip_4_01_47_to_02_03.gif" />
+<img src="images/Misson_ Impossible - Fallout_sample_clip_6_02_38_to_04_17.gif" />
+
+### Streaming videos analysis
+#### Non-violence
+<img src="images/Game_of_Thrones_S1_E8_(3.00-6.00_29.00-32.00)_sample_clip_5_03_20_to_03_28.gif" />
+
+#### Low-level violence
+<img src="images/Ip_Man(58.00-1.00.30_1.35.00-1.40.00)_sample_clip_6_04_48_to_05_13.gif" />
 
 #### high-level violence
-<img src="images/Misson_ Impossible - Fallout_sample_clip_6_02_38_to_04_17.gif" />
+<img src="images/The_Boys_S4_E2_(40.00-46.00)_sample_clip_2_00_32_to_01_05.gif" />
